@@ -40,8 +40,9 @@
       "endDate": "present",
       "highlights": [
         "Completed firmware-focused replacement of Sub-GHz mesh network functionality on a legacy product",
-        "Improved GLONASS/GNSS functionality on a sub-system of one of Lindsay's pivot irrigation products",
-        "Modifying the firmware on Lindsay's Smart Pivot to replace Modbus RTU communication with MQTT"
+        "Improved GPS/GNSS functionality on part of the traditional Zimmatic system",
+        "Enhanced the firmware on the Smart Pivot Panel (aka 712C Panel) to transceive communications over MQTT",
+        "Aided in the board bring-up and firmware porting of the Smart Pivot tower board"
       ]
     },
     {
