@@ -1,0 +1,148 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+    \usepackage[left=0.8in,right=0.8in,bottom=0.8in,top=0.8in]{geometry}
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+\vspace*{-40pt}
+
+    
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {Arjan Gupta}}\\
+	Kansas City, MO $\cdot$ arjangupta95@gmail.com $\cdot$ 661-699-3095 $\cdot$ github.com/arjangupta\\
+\end{center}
+
+\header{Skills}
+\begin{tabular}{ l l }
+	Programming Languages: & C/C++, Python, TypeScript/JavaScript, SQL, Bash                            \\
+	Tools:                 & Git, VS Code, Unix-like command-line, CMake, Makefiles                     \\
+	Testing frameworks:    & GTest, Jest, unittest, FFF                                                 \\
+	Operating systems:     & Ubuntu with i3, Windows 10 (with WSL 1, 2), Debian, MacOS, FreeRTOS, emBOS \\
+\end{tabular}
+\vspace{2mm}
+
+%==== Experience ====%
+\header{Work Experience}
+\vspace{1mm}
+
+\textbf{Lindsay Corporation} \hfill Olathe, KS\\
+\textit{Firmware Engineer} \hfill December 2021 - present\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+\item Completed a hardware and firmware replacement of Sub-GHz mesh network functionality on a legacy product, using UART comms on board
+\item Improved GPS/GNSS functionality on part of the traditional Zimmatic system
+\item Enhanced the firmware on the Smart Pivot Panel (aka 712C Panel) to transceive communications over MQTT
+\item Aided in the board bring-up of the Smart Pivot tower board
+\item Collaborated in porting the Tower Board firmware from one NXP microcontroller to another
+\item Implemented wrapper for SPI driver, used it to support embedded Flash memory and accelerometer features
+\item Worked on tire pressure monitoring for smart pivot, involving a Sub-GHz wireless module and sensor
+\item Rerouted data flowing via Modbus (on RS485) comms on main panel to MQTT
+\end{itemize}
+\textbf{AGI SureTrack} \hfill Lenexa, KS\\
+\textit{Embedded Software Engineer I \& II} \hfill October 2019 - December 2021\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Coordinated engineering work as a Team Lead, guided productivity and helped meet milestones
+	\item Redesigned and greatly improved the Gateway codebase for moduarity and code-coverage
+	\item Helped maintain LiDAR product, where a major portion of the redesigned Gateway code was re-used
+	\item Aided firmware development for Portable Auger product with ESP32 SoC
+	\item Implemented on-site diagnostics (LEDs, logs view) for device installation and connection diagnosis
+	\item Implemented a backend web-service for automated firmware updates
+	\item Proved and integrated 3G \& 4G cellular IoT capabilities of the Gateway product for wider sales
+	\item Inherited ownership of the Gateway product, brought it to market-release in 10 months
+\end{itemize}
+\textbf{ZOLOZ} \hfill Kansas City, MO\\
+\textit{Software Engineer} \hfill June 2017 - October 2019\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Implemented and optimized C++ image scaling and compression algorithms
+	\item Supported the R\&D department to fine-tune several computer vision models for object detection
+	\item Traveled to New Delhi, India to assist the integration with major payment services app called Paytm
+\end{itemize}
+
+%==== Education ====%
+\header{Education}
+\textbf{Worcester Polytechnic Institute}\\
+Master of Science in Robotics Engineering, AV Specialization \hfill August 2022 - December 2025\\
+\vspace{2mm}
+\textbf{University of Kansas}\\
+Bachelor of Science in Computer Engineering, Mathematics Minor \hfill August 2013 - May 2017\\
+\vspace{2mm}
+
+\header{Research Work}
+{\textbf{Computer Vision Research under Dr. Guanghui Wang}}\\
+Co-authored a research paper at KU ITTC on an object tracking algorithm for UAVs. Created ground-truths, wrote code to test the efficiency of the algorithm (in MATLAB). Reported the results for the paper.\\
+\vspace*{2mm}
+
+\header{Certificates}
+{\textbf{Coursera}}\\
+\vspace{2mm}
+Machine Learning \hfill Issued Aug 2022 | \footnotesize{Credential ID KKFMWZ7WZCF7}
+
+\ 
+\end{document}
