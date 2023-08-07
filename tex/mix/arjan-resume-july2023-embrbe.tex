@@ -1,0 +1,170 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+    \usepackage[left=0.8in,right=0.8in,bottom=0.8in,top=0.8in]{geometry}
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+\vspace*{-40pt}
+
+    
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {Arjan Gupta}}\\
+	Kansas City, MO $\cdot$ arjangupta95@gmail.com $\cdot$ 661-699-3095 $\cdot$ github.com/arjangupta\\
+\end{center}
+
+
+%==== Education ====%
+\header{Education}
+\textbf{Worcester Polytechnic Institute}\\
+Master of Science in Robotics Engineering, GPA:\@ 4.00/4.00 \hfill August 2022 --- Present\\
+Autonomous Vehicles Specialization\\
+\vspace{2mm}
+\textbf{University of Kansas}\\
+Bachelor of Science in Computer Engineering, Mathematics Minor \hfill August 2013 --- May 2017\\
+
+\vspace{2mm}
+
+%==== Projects ====%
+\header{Projects}
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+    \item 6 DoF Robotic Arm --- assembled arm, wrote its controller and kinematics in Python, and moved it using servos and a Raspberry Pi. Designing a computer-vision based localization system for it
+    \item Path Planning in Lung --- designed a path planning algorithm for a capsule robot to navigate through a human lung, then simulated it in MATLAB
+\end{itemize}
+
+%==== Experience ====%
+\header{Work Experience}
+\vspace{1mm}
+
+\textbf{Lev Technologies} \hfill Remote\\
+\textit{Co-Founder \& Engineering Expert} \hfill \textit{June 2023 --- presen}t\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+    \item Helped launch the usage of custom-trained YOLOv7 object detection model to help daycare workers
+    \item Designing the edge strategy to deploy the system on a Jetson Nano for real-time inference
+    \item Collaborating with other founders to develop the technical road-map
+\end{itemize}
+\textbf{Lindsay Corporation} \hfill Olathe, KS (Hybrid)\\
+\textit{Embedded Software Engineer II} \hfill \textit{December 2021 --- present}\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+    \item Enhanced the firmware on the Smart Pivot system to use GPS-path planning over MQTT
+    \item Mentored entry level engineers and interns, guided them with debugging and profiling tools
+    \item Served as a technical lead on Smart Pivot main UI panel, responsible for the entire software stack
+    \item Collaborated in board-bring up, developed wrappers for low-level drivers
+    \item Completed a hardware \& firmware replacement of Sub-GHz mesh network on a legacy product
+\end{itemize}
+\textbf{AGI SureTrack} \hfill Lenexa, KS (Hybrid)\\
+\textit{Embedded Software Engineer I \& II} \hfill \textit{October 2019 --- December 2021}\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Helped maintain LiDAR product with a 3 DoF robotic arm for grain inventory management
+	\item Coordinated engineering work as a team lead, guided productivity and helped meet milestones
+	\item Owned the product development and commercial launch of a new IoT Gateway product
+	\item Designed and implemented backend web-services for automated firmware updates
+\end{itemize}
+\textbf{ZOLOZ} \hfill Kansas City, MO\\
+\textit{Software Engineer} \hfill \textit{June 2017 --- October 2019}\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Developed and maintained biometric matching systems for a 2 DoF camera (pan-tilt)
+	\item Aided board-bring up and firmware development for Portable Auger product
+	\item Implemented and optimized C++ image scaling and compression algorithms
+	\item Supported the R\&D department to fine-tune several computer vision models for object detection
+\end{itemize}
+
+\header{Technical Skills}
+\vspace{2mm}
+\begin{tabular}{ l l }
+	Programming Languages: & C, C++, Python, TypeScript/JavaScript, URDF, Bash, MATLAB \\
+    Microcontrollers:      & NXP (MK70, IMXRT1064), PIC18, ATmega2560, ATTiny85        \\
+    Protocols:             & UART, SPI, I2C, MQTT, TCP/IP, NTP, HTTPS \\
+    Operating Systems:     & Linux, Windows, FreeRTOS, Android, mbedOS \\
+    Robotics/AI Frameworks:   & ROS, Gazebo, OpenCV, PyTorch, Foxglove Studio, YOLOv7 \\
+\end{tabular}
+\vspace{5mm}
+
+\header{Course Certificates}
+{\textbf{Coursera}}\\
+\vspace{1.75mm}
+Neural Networks and Deep Learning \hfill Issued May 2023 | \footnotesize{Credential ID R6Q353L77JC6}
+
+\normalsize{}
+
+\vspace{1mm}
+Machine Learning \hfill Issued Aug 2022 | \footnotesize{Credential ID KKFMWZ7WZCF7}
+
+\vspace{2mm}
+
+\normalsize{}
+
+{\textbf{Udemy}}\\
+\vspace{1mm}
+YOLOv7 YOLOv8: Deep Learning --- Computer Vision 2023 \hfill In-progress
+
+\end{document}
