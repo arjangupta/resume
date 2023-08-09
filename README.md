@@ -1,3 +1,3 @@
 # Arjan's Resumes
 
-Latest resume can be found under tex/arjan-resume-july2023.pdf
+Latest resumes can be found under tex/robotics, tex/embedded, or tex/combined.
