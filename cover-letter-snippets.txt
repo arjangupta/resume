@@ -1,0 +1,10 @@
+I am an experienced engineer, passionate about autonomous vehicles. About 5 years into my software development career, I began to desire working on broader, more complex systems.
+Since then, I have taken steps to develop skills in robotics, AI, and autonomous vehicles. In 2022, I started a master's degree in Robotics Engineering with a focus in Autonomous Vehicles at 
+Worcester Polytechnic Institute. While this has of course greatly improved by robotics skills, I have  I have taken independent courses in machine learning & deep learning as well.
+
+As of June 2023, I was offered to become a Co-Founder and Engineering Expert at a computer vision startup that helps daycare workers make sure that children are not accidentally left alone.
+This has extensively broadened my knowledge of machine learning & computer vision, especially with vYOLO7. I have worked with a LiDAR product at one of my previous
+professional positions as well, for which I wrote most of the embedded IoT code. This product was used to keep track of grain inventory in grain bins. I have also worked with a camera-based biometric
+system at my first professional position, which was used to identify people based on their faces. Perhaps most importantly, at my current position at Lindsay Corporation, I develop embedded systems for 
+enormous agricultural irrigation systems. In theses systems, I have worked with a variety of sensors - including GPS, accelerometers, proximity sensors - to develop a system that can autonomously
+drive a vehicle through a field and irrigate crops.
