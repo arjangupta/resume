@@ -269,32 +269,130 @@
     
     \item \textbf{Question 12:} Describe a situation where you had to resolve a conflict with a colleague or team member.
     \begin{itemize}
-        \item \textbf{Answer:} The recommended maintenance schedule for a Tuff Torq hydrostatic transmission varies depending on the product and the operating conditions. However, regular maintenance is essential to ensure the longevity and reliability of the transmission.
+        \item \textbf{Answer:} At my previous company, I was responsible for 
+        implementing the remote configuration of a device over the cellular
+        network. Particularly, we wanted to send a large JSON file over a 
+        3G cellular connection using a single MQTT message.
+        I was tasked with implementing this feature,
+        and found that the JSON file was too large to reliably send as
+        a single message. We were going to be using this device in
+        locations with spotty cellular coverage, so we needed to find a
+        way to break-down the JSON file into smaller chunks, or download
+        the file using a separate, persistent TCP connection than the MQTT
+        connection.\\
+
+        When I approached the cloud-side engineer with this problem, he
+        was adamant that the JSON file should be sent as a whole. He touted that
+        the theoretical speed of the cellular network was enough to send
+        the JSON file. He mentioned that he had read research papers
+        that showed that the capabilities of the cellular network were
+        far more than what we needed. However, I had seen some data transmission
+        logs, and had seen speeds as low as 1 kbps. I also knew that the
+        cellular network in some areas of physical installation of the device
+        was just not reliable enough to retrieve the entire JSON file as a single
+        MQTT message. When we tested the system in our office, the single
+        MQTT message was able to be sent just fine, so it was hard to substantiate
+        my claim.\\
+
+        This argument between me and the cloud-side engineer went on for
+        a few days, and was hindering progress on the project.
+        In order to resolve this issue, I approached an engineering manager and
+        asked to organize a field trip to see a physical installation of the device.
+        In any case we had been wanting to visit sites where the device was
+        being used, so this was a good opportunity to do so.
+        The trip was approved, and I took the cloud-side engineer with me.
+        We went to the physical installation, where we saw that the cellular
+        network was indeed unreliable. We also saw that the JSON file was
+        unable to be retrieved as a single MQTT message. Then in the following days,
+        designed a way to break-down the JSON file into smaller chunks,
+        and implemented the feature. This was a good learning experience for us
+        both, and we were able to resolve the conflict.
     \end{itemize}
     
-    \item \textbf{Question 13:} What types of fluids are recommended for use in a Tuff Torq hydrostatic transmission?
+    \item \textbf{Question 13:} Can you provide an example of when you had to meet a tight deadline or work under pressure?
     \begin{itemize}
-        \item \textbf{Answer:} Tuff Torq recommends the use of high-quality hydraulic fluids that meet the specifications outlined in the product manual.
+        \item \textbf{Answer:} In May 2023, I was working on a set of tasks to change the GPS
+        data communication method. The plan was to try
+        the improvement on a customer's machine in the field at the end of the month.
+        However, the customer wanted to use
+        the machine for the upcoming irrigation season, so we had a tight window
+        to test the functionality before the season started.\\
+
+        When we finally went to the field to test the new functionality, we
+        found that the GPS data was not being communicated to the control system.
+        If we did not get the issue fixed within the next few days, we would potentially
+        not be able to test the functionality until after the irrigation season, which
+        was several months away.\\
+
+        At this point, I had to work a few 12 hour days to get the issue resolved. The root
+        cause of the issue was that we had set up our GPS simulator incorrectly, such that
+        the packet of data that was being sent by the simulator was not the same as the
+        packet of data that was being sent by the GPS receiver. When we fixed the issue and
+        delivered it, our boss was very happy with our work, and rewarded us with a
+        lunch at a local restaurant.
     \end{itemize}
     
-    \item \textbf{Question 14:} What is the process for replacing a Tuff Torq hydrostatic transmission?
+    \item \textbf{Question 14:} How do you ensure attention to detail and maintain accuracy in your work?
     \begin{itemize}
-        \item \textbf{Answer:} The process for replacing a Tuff Torq hydrostatic transmission varies depending on the product and the equipment in which it is installed. However, it is generally recommended that the replacement be performed by a qualified technician.
+        \item \textbf{Answer:} Accuracy is a paradigm that goes hand-in-hand with
+        validation and verification. This comes by devising a set of requirements
+        for the system, and having a team review and approve these requirements.
+        Then, I design the system to meet these requirements, and I have a team
+        review and approve the design. Next, the implementation details are then
+        connected to test cases that verify that the system meets the requirements.
+        Finally, the system is tested in a real-world environment to ensure that it
+        meets the requirements.\\
+
+        Attention to detail is a bit more nuanced. Usually, when working toward a requirement,
+        it is possible to break down the requirement into smaller tasks. Usually, the more
+        fine-grained the task, the more attention to detail is achieved. I always endeavor
+        to break down my tasks into the smallest possible tasks, and I even set aside
+        some of them as ``nice-to-haves''. If time allows, I will work on these ``nice-to-haves''
+        to ensure that my work is as detailed as possible. The final step to
+        this is making sure that my code is readable and maintainable. This is done by
+        having other engineers review my code, and by writing unit tests for my code.
     \end{itemize}
     
-    \item \textbf{Question 15:} What is the process for repairing a Tuff Torq hydrostatic transmission?
+    \item \textbf{Question 15:} What is your preferred work environment and management style?
     \begin{itemize}
-        \item \textbf{Answer:} The process for repairing a Tuff Torq hydrostatic transmission varies depending on the type and extent of the damage. However, it is generally recommended that the repair be performed by a qualified technician.
+        \item \textbf{Answer:} I work best in situations where I have plenty of time to focus
+        on my work. I prefer to work in a quiet environment, and I like to have
+        a set of tasks that I can work on.\\
+
+        I prefer to work with a manager who is hands-off, but is available to
+        answer questions and provide guidance when needed. I also prefer to
+        work with a manager who is open to listening to my ideas and suggestions. At the same
+        time, I appreciate when I get regular feedback from my manager, and
+        recognizes when I have taken steps to act upon the feedback.\\
     \end{itemize}
     
-    \item \textbf{Question 16:} What is the process for troubleshooting a Tuff Torq hydrostatic transmission?
+    \item \textbf{Question 16:} Can you describe a time when you had to handle multiple tasks simultaneously and how you manage them?
     \begin{itemize}
-        \item \textbf{Answer:} The process for troubleshooting a Tuff Torq hydrostatic transmission varies depending on the type of problem and the equipment in which it is installed. However, Tuff Torq provides detailed troubleshooting guides and technical support to help customers diagnose and resolve issues with their products.
+        \item \textbf{Answer:} Currently, I have two different projects that I am working on in my
+        current position. One of them is coordination of a consulting team that is
+        based in India. I am helping them with the development of a new-generation of
+        our product. The other project is the development of a new feature for our
+        smart-pivot product that a proprietary idea to quickly figure out the alignment
+        status of the pivot. For this feature, I am writing the software-level requirements,
+        designing the software architecture, and implementing the software.\\
+
+        The way I manage these tasks is by looking at the priority of the next upcoming
+        deliverable. If a lot of progress can be made in a short amount of time, I take
+        care of that task first. I make sure that on average in a week, I have divided
+        my time between the two projects depending on the priority of the deliverables.
+        In general, I have found that by planning my expectations for the week, I can
+        manage my time effectively.\\
     \end{itemize}
     
-    \item \textbf{Question 17:} What is the process for ordering replacement parts for a Tuff Torq hydrostatic transmission?
+    \item \textbf{Question 17:} How do you handle failure or setbacks in your work?
     \begin{itemize}
-        \item \textbf{Answer:} Replacement parts for Tuff Torq hydrostatic transmissions can be ordered through authorized dealers and distributors, or directly from Tuff Torq.
+        \item \textbf{Answer:} Failures are the stepping stones to success. In order
+        to turn this adage into a technical approach, I use the concept of ``regression''.
+        When I encounter a failure, I first try to understand the root cause of the failure.
+        Then, I try to understand why the failure was not caught earlier. I then devise
+        a test case that will catch the failure in the future. This is fundamentally
+        the concept of regression testing, and is the engineering equivalent of
+        learning from your mistakes.\\
     \end{itemize}
     
     \item \textbf{Question 18:} What is the process for upgrading a Tuff Torq hydrostatic transmission?
